@@ -87,16 +87,16 @@ function checkAnswer(currentLevel)
     setTimeout(function(){
       $("body").removeClass("game-over");
     },200);
-    // var score=level*10
+    var score=level*10
     //$("h1").text("Score : "+score);
-    //$("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
+    $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
     startOver();
   }
 }
 
 function startOver(){
-  var score=level*10
-  $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
+//   var score=level*10
+//   $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
   gamePattern=[];
   userClickedPattern=[];
   started=false;
