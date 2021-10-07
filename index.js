@@ -3,7 +3,7 @@ var gamePattern=[];
 var userClickedPattern=[];
 var started=false;
 var level=0;
-$(document).keypress(function(event){
+$(document).click(function(event){
   //if(key=="a")
   if(!started)
   {
