@@ -3,8 +3,8 @@ var gamePattern=[];
 var userClickedPattern=[];
 var started=false;
 var level=0;
+
 $(document).keypress(function(event){
-  //if(key=="a")
   if(!started)
   {
      $("h1").text("Level "+level);
@@ -12,6 +12,7 @@ $(document).keypress(function(event){
     started=true;
   }
 });
+
 function nextSequence()
 {
   userClickedPattern=[];
@@ -23,30 +24,6 @@ function nextSequence()
   $("#"+randomChosenColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColor);
 }
-
-// $("body").keypress(function(event){
-//   switch(key){
-//     case "r":
-//     var userChosenColor="red";
-//     break;
-//     case "y":
-//     var userChosenColor="yellow";
-//     break;
-//     case "g":
-//     var userChosenColor="green";
-//     break;
-//     case "b":
-//     var userChosenColor="blue";
-//     break;
-//     default:
-//     console.log("Wrong key");
-//    }
-//     userClickedPattern.push(userChosenColor);
-//     playSound(userChosenColor);
-//     animatePress(userChosenColor);
-//     checkAnswer(userClickedPattern.length-1);
-// });
-
 $(".btn").click(function(){
   var userChosenColor=$(this).attr("id");
   userClickedPattern.push(userChosenColor);
@@ -88,15 +65,12 @@ function checkAnswer(currentLevel)
       $("body").removeClass("game-over");
     },200);
     var score=level*10
-    //$("h1").text("Score : "+score);
     $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
     startOver();
   }
 }
 
 function startOver(){
-//   var score=level*10
-//   $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
   gamePattern=[];
   userClickedPattern=[];
   started=false;
