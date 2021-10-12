@@ -3,7 +3,7 @@ var gamePattern=[];
 var userClickedPattern=[];
 var started=false;
 var level=0;
-$(document).keypress(function(event){
+$("#level-title").click(function(event){
   if(!started)
   {
      $("h1").text("Level "+level);
