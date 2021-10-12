@@ -3,7 +3,6 @@ var gamePattern=[];
 var userClickedPattern=[];
 var started=false;
 var level=0;
-
 $("#level-title").click(function(event){
   if(!started)
   {
@@ -12,7 +11,6 @@ $("#level-title").click(function(event){
     started=true;
   }
 });
-
 function nextSequence()
 {
   userClickedPattern=[];
@@ -53,7 +51,7 @@ function checkAnswer(currentLevel)
     {
       setTimeout(function(){
         nextSequence();
-      },1000);
+      },100);
     }
   }
   else
