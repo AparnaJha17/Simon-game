@@ -63,7 +63,7 @@ function checkAnswer(currentLevel)
       $("body").removeClass("game-over");
     },200);
     var score=level*10
-    $("h1").text("Game Over! Score : "+score+". "+"\nPress any key to restart");
+    $("h1").text("Game Over! Score : "+score+". "+"\nClick here to restart");
     startOver();
   }
 }
